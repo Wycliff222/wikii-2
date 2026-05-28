@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<HTML LANG="EN">
+    <head>
+        <meta charset="UTF-8">
+        <title>QR attendance management system</title>
+        <style>
+            body {font-family:arial,sans-serif;margin:0;background-color:#f4f6f9;}
+            header {background-color:#2c3e50;color: white;padding:20px;text-align:center;}
+            header img{width:100px;vertical-align :middle;}
+            header h1{display:inline-block;margin-left:15px;}
+            nav {text-align:center;margin:15px;}
+            nav button {padding:10px 20px;margin: background-color:#3498db;color:white;border:none;cursor:pointer;}
+            nav button:hover {background-color:#2980b9;}
+            portal {background-color:white;border:1px solid #ccc;padding:20px;margin:20px;border-radius:8px;}
+            h2 {color:#2c3e50;}
+            form label {display:block;margine:10px 0;}
+        btton {padding:8px 15px;magine-top:15px;background-color:#27ae60;color:white;border:none;cursor:pointer;}
+        button:hover {background-color:#1e8449;}
+        requrements details {margine-top:15px;padding:10px;background:#ecf0f1;border-radius:5px;}
+        </style>
+        </head>
+<body>
+<!--header with school image-->
+<header>
+    <img src="school.png" alt="school logo">
+    <h1>QR Attendance Management System</h1>
+</header>
+<!--registation and login-->
+<nav>
+    <button onclick="register()">regester</button>
+<button onclick="login()">login</button>
+</nav>
+<!--trainee portal-->
+<div class="portal">
+    <h2>trainee portal</h2>
+    <p>creat a class session and generate a QR code for student to scan.</p>
+</form>
+<label>session name:<input type="text" name="session_name"></label>
+<button type="button" onclick="generateQR()">generate QR code</button>
+</form>
+<div id="qrcode"></div>
+<div class="requirements">
+    <h3>trainee requirements</h3>
+    <ul>
+        <li>register class session</li>
+        <li>generate qr code for attendance</li>
+        <li>ensure student scan upon arrival</li>
+    </ul>
+</div>
+</div>
+<!--student portal-->
+<div class="portal">
+    <h2>student portal</h2>
+    <p>scan the QR code when you arrive in class to mark attendance.</p>
+    <button type="button" onclick="scanQR()">scan QR code </button>
+    <div id="scan result"></div>
+    <div class="details">
+        <h3>student details</h3>
+        <ul>
+            <li>full name</li>
+            <li>student id</li>
+            <li>class session</li>
+        </ul>
+    </div>
+</div>
+<!--administrator portal-->
+<div class="portal">
+    <h2>administrator portal</h2>
+    <p>view attendance records submitted by students.</p>
+    <button type="button" onclick="viewrecords()">view attendance records</button>
+    <div id="records"></div>
+    <div class="requirements">
+        <h3>administrator requirements</h3>
+        <ul>
+            <li>monitor attendance records</li>
+            <li>generate attendance reports</li>
+            <li>manage trainee and student accounts</li>
+        </ul>
+    </div>
+</div>
+<!--java scipt-->
+<script>
+    function register() {
+        alert("regestration page wouldopen here")
+    }
+
+    function login() {
+        // Login logic here
+    }
+
+    function generateQR() {
+        document.getElementById("qrcode").innerHTML ="<p>[qrcodewould appear here]</p>";
+    }
+
+    function scanQR() {
+        document.getElementById("scanresult").innerHTML="<p>[attendance marked successfully]</p>";
+    }
+
+    function viewrecords() {
+        document.getElementById("records").innerHTML="<ul><li>student A - present</li><li>student B - absent</li><li>student C - present</li><</ul>";
+    }
+</script>
+</body>
+    </HTML>
+ 
